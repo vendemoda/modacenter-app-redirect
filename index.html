@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Redirecionamento</title>
+
+	<script>
+
+
+	function getMobile() {
+		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		if (/windows phone/i.test(userAgent)) {
+			document.location.href = "../windows.html";
+		}
+
+		if (/android/i.test(userAgent)) {
+			document.location.href = "https://play.google.com/store/apps/details?id=br.com.modacenter.appoficial";
+		}
+
+		if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+			document.location.href = "https://apps.apple.com/br/app/moda-center-oficial/id1583015694";
+		}
+
+	}
+
+
+	</script>
+</head>
+
+<body onLoad="javascript:getMobile();">
+	
+</body>
+</html>
