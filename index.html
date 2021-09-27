@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Redirecionamento</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionamento</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/index.css" />
+    <script>
+      function getMobile() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/windows phone/i.test(userAgent)) {
+          document.location.href = "../windows.html";
+        }
 
-	<script>
+        if (/android/i.test(userAgent)) {
+          document.location.href =
+            "https://play.google.com/store/apps/details?id=br.com.modacenter.appoficial";
+        }
 
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          document.location.href =
+            "https://apps.apple.com/br/app/moda-center-oficial/id1583015694";
+        }
+      }
+    </script>
+  </head>
 
-	function getMobile() {
-		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-		if (/windows phone/i.test(userAgent)) {
-			document.location.href = "../windows.html";
-		}
+  <body>
+    <div class="container">
+      <div
+        class="
+          d-flex
+          flex-column
+          justify-content-center
+          align-items-center
+          mt-5
+        "
+      >
+        <img src="img/logo.svg" />
+        <p class="my-5 download-title">Baixe agora mesmo</p>
+        <a
+          href="https://play.google.com/store/apps/details?id=br.com.modacenter.appoficial"
+          ><img class="" src="img/google_play.svg"
+        /></a>
+        <a href="https://apps.apple.com/br/app/moda-center-oficial/id1583015694"
+          ><img class="mt-5" src="img/app_store.svg"
+        /></a>
+      </div>
+    </div>
 
-		if (/android/i.test(userAgent)) {
-			document.location.href = "https://play.google.com/store/apps/details?id=br.com.modacenter.appoficial";
-		}
-
-		if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-			document.location.href = "https://apps.apple.com/br/app/moda-center-oficial/id1583015694";
-		}
-
-	}
-
-
-	</script>
-</head>
-
-<body onLoad="javascript:getMobile();">
-	
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
