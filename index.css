@@ -1,4 +1,12 @@
+body {
+  background-color: #9841e2;
+  color: white;
+}
 .download-title {
   font-size: 18px;
   font-weight: bold;
+}
+
+.logo-image {
+  max-width: 300px;
 }
